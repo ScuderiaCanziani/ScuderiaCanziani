@@ -2,415 +2,281 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Impostazioni generali */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #272727; /* Colore scuro di sfondo */
-    color: #fff;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #272727;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Menu laterale (sostituito da div) */
+/* Menu */
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1f1f1f;
-    padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 10px 0;
 }
 
 nav a {
-    text-decoration: none;
-    color: #f4a261; /* Giallo per i link */
-    margin: 0 15px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  color: #f4a261;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-    color: #2a9d8f; /* Verde per hover */
-    transform: scale(1.1); /* Leggero ingrandimento al passaggio del mouse */
+  color: #2a9d8f;
+  transform: scale(1.1);
 }
 
 nav a:active {
-    color: #f4a261; /* Giallo per il link attivo */
+  color: #f4a261;
 }
 
-/* Sezioni principali */
+/* Contenuto principale */
 .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
 }
 
 header {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 header h1 {
-    font-size: 3rem;
-    color: #f4a261;
-    margin-bottom: 10px;
+  font-size: 3rem;
+  color: #f4a261;
+  margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.3rem;
-    color: #fff;
+  font-size: 1.3rem;
+  color: #fff;
 }
 
-/* Sezione card con effetto hover */
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+  align-items: stretch;
+}
+
 section.card {
-    margin-bottom: 40px;
-    display: inline-block;
-    width: calc(33.33% - 20px); /* Impostiamo una larghezza per le card (3 colonne) con un gap */
-    margin-right: 20px;
-    background-color: #333; /* Colore di sfondo della card */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiunta transizione per l'animazione */
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction:column;
+  max-width: 400px;
+  margin-bottom: 30px;
+  justify-content: space-between;
 }
 
-/* Animazione al passaggio del mouse */
 section.card:hover {
-    transform: translateY(-5px); /* Solleva la card al passaggio del mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombra più intensa */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Titoli delle card (Sezione podcast, progetti, etc.) */
-h2 {
-    font-size: 2rem;
-    color: #f4a261; /* Giallo per i titoli */
-    margin-bottom: 15px;
+section.card h2 {
+  font-size: 2rem;
+  color: #f4a261;
+  margin-bottom: 15px;
 }
 
-section p {
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 1.8;
+section.card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
 }
 
-/* Bottone principale */
+/* Bottone */
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin-top: 10px;
-    background-color: #f4a261;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 10px;
+  background-color: #f4a261;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Effetto hover per i bottoni */
 .btn:hover {
-    background-color: #2a9d8f;
-    transform: translateY(-2px); /* Sollevare il bottone */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombra più pronunciata */
+  background-color: #2a9d8f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
-    background-color: #1f1f1f;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: #ccc;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-/* Media Queries per dispositivi mobili */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    section h2 {
-        font-size: 1.7rem;
-    }
-
-    section p {
-        font-size: 1.1rem;
-    }
-
-    .btn {
-        padding: 12px 25px;
-    }
-
-    footer {
-        font-size: 0.9rem;
-    }
-
-    /* Adattamenti per le card su dispositivi mobili */
-    section.card {
-        width: calc(50% - 20px); /* Due colonne per schermi più piccoli */
-        margin-right: 20px;
-    }
-}
-
-/* Allinea le card in una sola colonna su schermi molto piccoli */
-@media (max-width: 480px) {
-    section.card {
-        width: 100%; /* Una sola colonna per schermi molto piccoli */
-        margin-right: 0;
-    }
-}
-
-/* Rimuovere i punti dall'elenco e allineare il testo */
+/* Team list */
 section ul {
-    list-style: none; /* Rimuove i punti dall'elenco */
-    padding-left: 0;
-    margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
 }
 
-/* Stile per ogni elemento dell'elenco */
 section ul li {
-    display: flex;
-    justify-content: flex-start; /* Allinea a sinistra */
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
-/* Stile per il nome dei membri del team */
 section ul li strong {
-    margin-right: 10px; /* Spazio tra nome e ruolo */
-    color: #f4a261; /* Giallo per i nomi */
+  margin-right: 10px;
+  color: #f4a261;
 }
 
-/* Stile per il ruolo dei membri del team */
 section ul li span {
-    color: #ccc; /* Colore per il ruolo */
-    font-weight: normal;
+  color: #ccc;
+  font-weight: normal;
 }
 
-/* Aggiungere margine tra il titolo e il testo dell'elenco */
-section h2 {
-    margin-bottom: 10px; /* Margine per separare il titolo dal testo */
-}
-
-/* Stile per i link (senza bottone, solo testo) */
+/* Email link */
 a.email-link {
-    font-weight: bold; /* Grassetto */
-    color: #f4a261; /* Giallo per il link */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    transition: color 0.3s ease; /* Transizione dolce per il colore */
+  font-weight: bold;
+  color: #f4a261;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Effetto hover per il link */
 a.email-link:hover {
-    color: #2a9d8f; /* Verde per hover */
+  color: #2a9d8f;
 }
+
+/* Logo + Titolo */
 .titleLogo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .titleLogo img {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-  }
-.container {display: flex;
-justify-content: center; /* centra orizzontalmente */
-align-items: center;     /* centra verticalmente, se vuoi */           /* facoltativo, per centratura verticale */
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-/* layout desktop di default */
-.projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    align-items: stretch;
-  }
-  
-  /* Solo su schermi piccoli: colonna */
-  @media (max-width: 768px) {
-    .projects-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
-  section.card {
-    margin-bottom: 40px;
-    display: inline-block;
-    width: calc(33.33% - 20px); /* Impostiamo una larghezza per le card (3 colonne) con un gap */
-    margin-right: 20px;
-    background-color: #333; /* Colore di sfondo della card */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiunta transizione per l'animazione */
+
+.titleLogo img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
 }
-  
-  .card .btn {
-    margin-top: auto;             /* Magia: lo manda in fondo */
+
+/* Container centrale */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal video */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 5vh auto;
+  background: transparent;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal .close {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
   }
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
+
+  header h1 {
+    font-size: 2.5rem;
   }
-  
-  .modal-content {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    margin: 5vh auto;
-    background: transparent;
+
+  section.card h2 {
+    font-size: 1.7rem;
   }
-  
-  .modal-content iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
+
+  section.card p {
+    font-size: 1.1rem;
   }
-  
-  .modal .close {
-    position: absolute;
-    top: -30px;
-    right: 0;
-    color: #fff;
+
+  .btn {
+    padding: 12px 25px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
     font-size: 2rem;
-    cursor: pointer;
   }
-  
-  
 
-/* Griglia per le card dei progetti */
+  section.card h2 {
+    font-size: 1.5rem;
+  }
 
-
-/* Stili generali
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  .header {
-    background-color: #333;
-    padding: 1rem 0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .logo-heading {
-    color: #fff;
-    margin: 0;
-  }
-  
-  .menu-list {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-list li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .menu-list li a.active {
-    border-bottom: 2px solid #fff;
-  }
-  
-  .projects-section {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  .project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .project-card img {
-    max-width: 100%;
-    border-radius: 4px;
-  }
-  
-  .project-card h2 {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-  }
-  
-  .project-card p {
+  section.card p {
     font-size: 1rem;
-    margin: 0.5rem 0 1rem;
   }
-  
-  .project-card a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
-  
-  .project-card a:hover {
-    background-color: #555;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    margin-top: 2rem;
-  }
-   */
+}

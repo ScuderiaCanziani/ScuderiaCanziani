@@ -10,7 +10,7 @@
 /* Impostazioni generali */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #121212; /* Colore di sfondo scuro */
+    background-color: #1e1e1e; /* Colore scuro del corpo */
     color: #fff;
     line-height: 1.6;
     margin: 0;
@@ -24,7 +24,7 @@ body {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #1e1e1e; /* Colore di sfondo scuro del menu */
+    background-color: #2c2c2c; /* Colore di sfondo scuro del menu */
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
@@ -81,7 +81,7 @@ body {
 
 header h1 {
     font-size: 2.5rem;
-    color: #f4a261; /* Giallo Ferrari per il titolo */
+    color: #f4a261; /* Giallo per il titolo */
     margin-bottom: 10px;
 }
 
@@ -96,7 +96,7 @@ h2 {
 }
 
 footer {
-    background-color: #1e1e1e; /* Colore scuro per il footer */
+    background-color: #2c2c2c; /* Colore scuro per il footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -112,7 +112,6 @@ footer {
     .menu {
         left: 0;
         width: 200px;
-        z-index: 1000;
     }
 
     .menu-toggle {
@@ -156,4 +155,57 @@ footer {
         width: 100%;
         height: 200px;
     }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Menu inizialmente nascosto a sinistra */
+    width: 250px;
+    height: 100%;
+    background-color: #2c2c2c; /* Colore di sfondo scuro del menu */
+    transition: left 0.3s ease-in-out; /* Transizione fluida per l'apertura/chiusura */
+    padding-top: 60px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu.active {
+    left: 0; /* Menu visibile quando viene aggiunta la classe active */
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu-list li {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.menu-list a {
+    color: #f4a261; /* Giallo per i link */
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.menu-list a:hover {
+    background-color: #2a9d8f; /* Verde tenue per hover */
+    color: #fff;
 }

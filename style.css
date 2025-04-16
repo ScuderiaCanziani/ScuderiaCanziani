@@ -10,96 +10,130 @@
 /* Impostazioni generali */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #1e1e1e; /* Colore scuro del corpo */
+    background-color: #272727; /* Colore scuro di sfondo */
     color: #fff;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Menu laterale */
-.menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #2c2c2c; /* Colore di sfondo scuro del menu */
-    transition: left 0.3s ease-in-out;
-    padding-top: 60px;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+h1, h2, p {
+    margin-bottom: 1rem;
 }
 
-.menu-header {
+/* Menu laterale (sostituito da div) */
+nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    background-color: #1f1f1f;
+    padding: 10px 0;
 }
 
-.menu-toggle {
-    background: transparent;
-    border: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.menu-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.menu-list li {
-    padding: 15px 20px;
-    text-align: left;
-}
-
-.menu-list a {
-    color: #f4a261; /* Giallo per i link */
+nav a {
     text-decoration: none;
+    color: #f4a261; /* Giallo per i link */
+    margin: 0 15px;
     font-size: 1.2rem;
-    display: block;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.menu-list a:hover {
-    background-color: #2a9d8f; /* Verde tenue per hover */
-    color: #fff;
+nav a:hover {
+    color: #2a9d8f; /* Verde per hover */
+    transform: scale(1.1); /* Leggero ingrandimento al passaggio del mouse */
 }
 
-/* Logo */
-.logo {
-    width: 40px;
-    height: auto;
+nav a:active {
+    color: #f4a261; /* Giallo per il link attivo */
 }
 
-/* Contenuto principale */
+/* Sezioni principali */
 .content {
-    margin-left: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 30px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 50px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: #f4a261; /* Giallo per il titolo */
+    font-size: 3rem;
+    color: #f4a261;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #fff;
 }
 
+/* Sezione card con effetto hover */
+section.card {
+    margin-bottom: 40px;
+    display: inline-block;
+    width: calc(33.33% - 20px); /* Impostiamo una larghezza per le card (3 colonne) con un gap */
+    margin-right: 20px;
+    background-color: #333; /* Colore di sfondo della card */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiunta transizione per l'animazione */
+}
+
+/* Animazione al passaggio del mouse */
+section.card:hover {
+    transform: translateY(-5px); /* Solleva la card al passaggio del mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombra più intensa */
+}
+
+/* Titoli delle card (Sezione podcast, progetti, etc.) */
 h2 {
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #f4a261; /* Giallo per i titoli */
+    margin-bottom: 15px;
 }
 
+section p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Bottone principale */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 10px;
+    background-color: #f4a261;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Effetto hover per i bottoni */
+.btn:hover {
+    background-color: #2a9d8f;
+    transform: translateY(-2px); /* Sollevare il bottone */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Ombra più pronunciata */
+}
+
+/* Footer */
 footer {
-    background-color: #2c2c2c; /* Colore scuro per il footer */
-    color: #fff;
+    background-color: #1f1f1f;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
+    font-size: 1rem;
+    color: #ccc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Media Queries per dispositivi mobili */
@@ -108,104 +142,83 @@ footer {
         padding: 10px;
     }
 
-    /* Menu laterale */
-    .menu {
-        left: 0;
-        width: 200px;
-    }
-
-    .menu-toggle {
-        font-size: 28px;
-    }
-
-    .menu-list {
-        display: none;
-    }
-
-    .menu.active .menu-list {
-        display: block;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    header p {
-        font-size: 1rem;
+    section h2 {
+        font-size: 1.7rem;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    section p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
     }
 
     footer {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
-    /* Adattamenti per contenuti nelle pagine */
-    section {
-        padding: 15px;
-    }
-
-    .embed-container iframe {
-        width: 100%;
-        height: 200px;
+    /* Adattamenti per le card su dispositivi mobili */
+    section.card {
+        width: calc(50% - 20px); /* Due colonne per schermi più piccoli */
+        margin-right: 20px;
     }
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Menu inizialmente nascosto a sinistra */
-    width: 250px;
-    height: 100%;
-    background-color: #2c2c2c; /* Colore di sfondo scuro del menu */
-    transition: left 0.3s ease-in-out; /* Transizione fluida per l'apertura/chiusura */
-    padding-top: 60px;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
+/* Allinea le card in una sola colonna su schermi molto piccoli */
+@media (max-width: 480px) {
+    section.card {
+        width: 100%; /* Una sola colonna per schermi molto piccoli */
+        margin-right: 0;
+    }
 }
 
-.menu.active {
-    left: 0; /* Menu visibile quando viene aggiunta la classe active */
-}
-
-.menu-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-.menu-toggle {
-    background: transparent;
-    border: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.menu-list {
-    list-style-type: none;
+/* Rimuovere i punti dall'elenco e allineare il testo */
+section ul {
+    list-style: none; /* Rimuove i punti dall'elenco */
     padding-left: 0;
+    margin-top: 10px;
 }
 
-.menu-list li {
-    padding: 15px 20px;
-    text-align: left;
+/* Stile per ogni elemento dell'elenco */
+section ul li {
+    display: flex;
+    justify-content: flex-start; /* Allinea a sinistra */
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
 }
 
-.menu-list a {
-    color: #f4a261; /* Giallo per i link */
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
+/* Stile per il nome dei membri del team */
+section ul li strong {
+    margin-right: 10px; /* Spazio tra nome e ruolo */
+    color: #f4a261; /* Giallo per i nomi */
 }
 
-.menu-list a:hover {
-    background-color: #2a9d8f; /* Verde tenue per hover */
-    color: #fff;
+/* Stile per il ruolo dei membri del team */
+section ul li span {
+    color: #ccc; /* Colore per il ruolo */
+    font-weight: normal;
+}
+
+/* Aggiungere margine tra il titolo e il testo dell'elenco */
+section h2 {
+    margin-bottom: 10px; /* Margine per separare il titolo dal testo */
+}
+
+/* Stile per i link (senza bottone, solo testo) */
+a.email-link {
+    font-weight: bold; /* Grassetto */
+    color: #f4a261; /* Giallo per il link */
+    text-decoration: none; /* Rimuove la sottolineatura */
+    transition: color 0.3s ease; /* Transizione dolce per il colore */
+}
+
+/* Effetto hover per il link */
+a.email-link:hover {
+    color: #2a9d8f; /* Verde per hover */
 }

@@ -4,51 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi siamo</title>
+    <title>Chi Siamo - Scuderia Canziani</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Aggiungi FontAwesome -->
 </head>
 
 <body>
     <!-- Menu laterale (Hamburger Menu) -->
-    <nav id="menu" class="menu">
-        <div class="menu-header">
-            <img src="logo.png" alt="Logo Scuderia Canziani" class="logo">
-            <button id="menu-toggle" class="menu-toggle">&#9776;</button>
-        </div>
-        <ul id="menu-list" class="menu-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="./podcast">Podcast</a></li>
-            <li><a href="./about">Chi siamo</a></li>
-            <li><a href="./projects">Progetti</a></li>
-        </ul>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="podcast.html"><i class="fas fa-podcast"></i> Podcast</a>
+        <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="about.html"><i class="fas fa-users"></i> About</a>
     </nav>
 
     <!-- Contenuto principale -->
     <div class="content">
         <header>
             <h1>Chi siamo</h1>
-            <p><strong>Scuderia Canziani</strong>, gruppo nato nel 2023 che produce contenuti sull'informatica.</p>
+            <p>Scopri di più su chi siamo e cosa facciamo.</p>
         </header>
 
+        <!-- Sezione obiettivo -->
         <section>
-            <h2>🎓 Membri del gruppo</h2>
-            <ul>
-                <li><strong>Christian Armarolli</strong></li>
-                <li><strong>Roberto Garegnani</strong></li>
-                <li><strong>Elia Ferrari</strong></li>
-                <li><strong>Giorgio Conti</strong></li>
-                <li><strong>Matteo Nicora</strong></li>
-                <li><strong>Simone Pagliara</strong></li>
-                <li><strong>Leonardo Vallini</strong></li>
-            </ul>
-            <p>📬 Per contattarci scrivici a: <a href="mailto:scuderiacanziani@isiskeynes.it">scuderiacanziani@isiskeynes.it</a></p>
+            <h2>📚 Il nostro obiettivo</h2>
+            <p>Scuderia Canziani è un gruppo di studenti che si dedica alla creazione di contenuti e progetti sull'informatica. Il nostro scopo è unire passione e innovazione, creando contenuti di valore per la comunità tecnologica.</p>
         </section>
+
+        <!-- Sezione membri -->
+        <section>
+            <h2>👥 I nostri membri</h2>
+            <p>Siamo un team affiatato, con diverse competenze nell'ambito della programmazione, della progettazione e della comunicazione.</p>
+            <ul>
+                <li><strong>Christian Armarolli</strong><span> - Fondatore e sviluppatore</span></li>
+                <li><strong>Roberto Garegnani</strong><span> - Design e sviluppo front-end</span></li>
+                <li><strong>Elia Ferrari</strong><span> - Sviluppatore backend</span></li>
+                <li><strong>Giorgio Conti</strong><span> - Content creator</span></li>
+                <li><strong>Matteo Nicora</strong><span> - Marketing e strategia</span></li>
+                <li><strong>Simone Pagliara</strong><span> - Tester e QA</span></li>
+                <li><strong>Leonardo Vallini</strong><span> - Sviluppatore full-stack</span></li>
+            </ul>
+        </section>
+        
+
+        <section>
+            <h2>📬 Contattaci</h2>
+            <p>Se vuoi entrare in contatto con noi, puoi scrivere una mail a: <a href="mailto:scuderiacanziani@isiskeynes.it" class="email-link">scuderiacanziani@isiskeynes.it</a></p>
+        </section>
+        
     </div>
 
-    <footer>
-        <p>&copy; 2025 Scuderia Canziani</p>
-    </footer>
+
 
     <!-- Inclusione del file JavaScript -->
     <script src="script.js"></script>

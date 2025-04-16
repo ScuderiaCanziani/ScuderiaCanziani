@@ -222,3 +222,18 @@ a.email-link {
 a.email-link:hover {
     color: #2a9d8f; /* Verde per hover */
 }
+.titleLogo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .titleLogo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+  }
+.container {display: flex;
+justify-content: center; /* centra orizzontalmente */
+align-items: center;     /* centra verticalmente, se vuoi */           /* facoltativo, per centratura verticale */
+}

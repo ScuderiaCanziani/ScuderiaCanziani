@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scuderia Canziani</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Inclusione del font Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
- <!-- Puoi aggiungere il tuo CSS per personalizzare lo stile -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Scuderia Canziani</h1>
-    </header>
-
-    <section>
-        <p>Benvenuti sul sito ufficiale della <strong>Scuderia Canziani</strong> 🏎️💻</p>
-
-        <p>Siamo un gruppo di studenti appassionati di tecnologia. In questo sito puoi trovare:</p>
-        
-        <ul>
-            <li>🎧 Il nostro <a href="./podcast">podcast</a></li>
-            <li>📚 I nostri progetti passati (In arrivo!)</li>
-            <li>👥 Le informazioni sul nostro team (<a href="./about">chi siamo</a>)</li>
-            <li>🛠️ I progetti a cui stiamo lavorando (In arrivo!)</li>
+    <!-- Menu laterale (Hamburger Menu) -->
+    <nav id="menu" class="menu">
+        <div class="menu-header">
+            <img src="logo.png" alt="Logo Scuderia Canziani" class="logo">
+            <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+        </div>
+        <ul id="menu-list" class="menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="./podcast">Podcast</a></li>
+            <li><a href="./about">Chi siamo</a></li>
+            <li><a href="./projects">Progetti</a></li>
         </ul>
+    </nav>
 
-        <blockquote>
-            <p>Scopri, ascolta, partecipa!</p>
-        </blockquote>
-    </section>
+    <!-- Sezione principale -->
+    <div class="content">
+        <header>
+            <h1>Scuderia Canziani</h1>
+            <p>Benvenuti nel sito ufficiale della Scuderia Canziani 🏎️💻</p>
+        </header>
+
+        <section>
+            <h2>🎧 Il nostro Podcast</h2>
+            <p>Ascolta ogni settimana le nostre discussioni su tecnologia e software engineering.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Scuderia Canziani</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

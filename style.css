@@ -10,97 +10,150 @@
 /* Impostazioni generali */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #121212; /* Colore di sfondo scuro */
+    color: #fff;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
-header {
-    background: linear-gradient(135deg, #2a9d8f, #264653);
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Menu laterale */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #1e1e1e; /* Colore di sfondo scuro del menu */
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 10px;
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
-/* Sezione principale */
-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
+.menu-toggle {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
 }
 
-/* Titoli */
-h2 {
-    font-size: 2rem;
-    color: #2a9d8f;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Lista dei membri */
-ul {
+.menu-list {
     list-style-type: none;
     padding-left: 0;
 }
 
-ul li {
-    font-size: 1.1rem;
-    padding: 8px 0;
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.3s ease;
+.menu-list li {
+    padding: 15px 20px;
+    text-align: left;
 }
 
-ul li:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-}
-
-/* Link */
-a {
-    color: #2a9d8f;
+.menu-list a {
+    color: #f4a261; /* Giallo per i link */
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    display: block;
 }
 
-a:hover {
-    color: #264653;
+.menu-list a:hover {
+    background-color: #2a9d8f; /* Verde tenue per hover */
+    color: #fff;
 }
 
-/* Sezione di contatto */
-section p {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 20px;
+/* Logo */
+.logo {
+    width: 40px;
+    height: auto;
 }
 
-/* Layout responsive */
+/* Contenuto principale */
+.content {
+    margin-left: 0;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f4a261; /* Giallo Ferrari per il titolo */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1e1e1e; /* Colore scuro per il footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries per dispositivi mobili */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Menu laterale */
+    .menu {
+        left: 0;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        font-size: 28px;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .menu.active .menu-list {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
     header h1 {
         font-size: 2rem;
     }
 
-    section {
-        padding: 20px;
+    header p {
+        font-size: 1rem;
     }
 
     h2 {
         font-size: 1.5rem;
     }
 
-    ul li {
+    footer {
         font-size: 1rem;
     }
-}
 
+    /* Adattamenti per contenuti nelle pagine */
+    section {
+        padding: 15px;
+    }
+
+    .embed-container iframe {
+        width: 100%;
+        height: 200px;
+    }
+}

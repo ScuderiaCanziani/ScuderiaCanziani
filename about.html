@@ -1,36 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi siamo</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-     <!-- Puoi aggiungere il tuo CSS per personalizzare lo stile -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Chi siamo</h1>
-    </header>
-
-    <section>
-        <p><strong>Scuderia Canziani</strong>, gruppo nato nel 2023 che produce contenuti sull'informatica.</p>
-
-        <h2>🎓 Membri del gruppo</h2>
-
-        <ul>
-            <li><strong>Christian Armarolli</strong></li>
-            <li><strong>Roberto Garegnani</strong></li>
-            <li><strong>Elia Ferrari</strong></li>
-            <li><strong>Giorgio Conti</strong></li>
-            <li><strong>Matteo Nicora</strong></li>
-            <li><strong>Simone Pagliara</strong></li>
-            <li><strong>Leonardo Vallini</strong></li>
+    <!-- Menu laterale (Hamburger Menu) -->
+    <nav id="menu" class="menu">
+        <div class="menu-header">
+            <img src="logo.png" alt="Logo Scuderia Canziani" class="logo">
+            <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+        </div>
+        <ul id="menu-list" class="menu-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="./podcast">Podcast</a></li>
+            <li><a href="./about">Chi siamo</a></li>
+            <li><a href="./projects">Progetti</a></li>
         </ul>
+    </nav>
 
-        <p>📬 Per contattarci scrivici a: <a href="mailto:scuderiacanziani@isiskeynes.it">scuderiacanziani@isiskeynes.it</a></p>
-    </section>
+    <!-- Contenuto principale -->
+    <div class="content">
+        <header>
+            <h1>Chi siamo</h1>
+            <p>**Scuderia Canziani**, gruppo nato nel 2023 che produce contenuti sull'informatica.</p>
+        </header>
 
+        <section>
+            <h2>🎓 Membri del gruppo</h2>
+            <ul>
+                <li><strong>Christian Armarolli</strong></li>
+                <li><strong>Roberto Garegnani</strong></li>
+                <li><strong>Elia Ferrari</strong></li>
+                <li><strong>Giorgio Conti</strong></li>
+                <li><strong>Matteo Nicora</strong></li>
+                <li><strong>Simone Pagliara</strong></li>
+                <li><strong>Leonardo Vallini</strong></li>
+            </ul>
+            <p>📬 Per contattarci scrivici a: <a href="mailto:scuderiacanziani@isiskeynes.it">scuderiacanziani@isiskeynes.it</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Scuderia Canziani</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

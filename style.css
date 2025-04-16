@@ -7,121 +7,100 @@
     box-sizing: border-box;
 }
 
+/* Impostazioni generali */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f7f6;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
-}
-
-/* Contenitore principale */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
 header {
-    background-color: #2a9d8f;
+    background: linear-gradient(135deg, #2a9d8f, #264653);
     color: white;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
     margin-bottom: 10px;
 }
 
-header nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 20px;
+/* Sezione principale */
+section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-header nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-header nav a:hover {
-    color: #f1faee;
-}
-
-/* Sezione Hero */
-#hero {
-    background: linear-gradient(135deg, #2a9d8f, #264653);
-    color: white;
-    padding: 50px 0;
-    text-align: center;
-}
-
-#hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-#hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* Sezione Episodi */
-#episodes {
-    padding: 40px 0;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-#episodes h2 {
+/* Titoli */
+h2 {
     font-size: 2rem;
+    color: #2a9d8f;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.embed-container {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* Lista dei membri */
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-iframe {
-    border-radius: 12px;
+ul li {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
 }
 
-/* Footer */
-footer {
-    background-color: #2a9d8f;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
+ul li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
 }
 
-footer p {
+/* Link */
+a {
+    color: #2a9d8f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #264653;
+}
+
+/* Sezione di contatto */
+section p {
     font-size: 1rem;
+    color: #555;
+    margin-top: 20px;
 }
 
-/* Responsività */
+/* Layout responsive */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
 
-    #hero h2 {
-        font-size: 2rem;
+    section {
+        padding: 20px;
     }
 
-    #hero p {
-        font-size: 1rem;
-    }
-
-    #episodes h2 {
+    h2 {
         font-size: 1.5rem;
     }
+
+    ul li {
+        font-size: 1rem;
+    }
 }
+

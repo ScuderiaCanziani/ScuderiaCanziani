@@ -30,13 +30,13 @@
 
         <!-- Sezione obiettivo -->
         <section>
-            <h2>📚 Il nostro obiettivo</h2>
+            <h2><i class="las la-bullseye" style="color: #f4a261;"></i> Il nostro obiettivo</h2>
             <p>Scuderia Canziani è un gruppo di studenti che si dedica alla creazione di contenuti e progetti sull'informatica. Il nostro scopo è unire passione e innovazione, creando contenuti di valore per la comunità tecnologica.</p>
         </section>
 
         <!-- Sezione membri -->
         <section>
-            <h2>👥 I nostri membri</h2>
+            <h2><i class="las la-users" style="color: #f4a261;"></i> I nostri membri</h2>
             <p>Siamo un team affiatato, con diverse competenze nell'ambito della programmazione, della progettazione e della comunicazione.</p>
             <ul>
                 <li><strong>Christian Armarolli</strong><span> - Fondatore e sviluppatore</span></li>
@@ -51,9 +51,21 @@
         
 
         <section>
-            <h2>📬 Contattaci</h2>
+            <h2><i class="las la-envelope" style="color: #f4a261;"></i> Social e contatti</h2>
+            <a href="https://github.com/ScuderiaCanziani"><i class="lab la-github la-2x" style="color: #f4a261;"></i></a>
+            <i class="lab la-youtube la-2x" style="color: #f4a261; cursor: pointer;" onclick="openVideoModal('video/canziani.mp4')"></i>
             <p>Se vuoi entrare in contatto con noi, puoi scrivere una mail a: <a href="mailto:scuderiacanziani@isiskeynes.it" class="email-link">scuderiacanziani@isiskeynes.it</a></p>
         </section>
+        <div class="modal" id="videoModal">
+            <div class="modal-content">
+              <span class="close" onclick="closeVideoModal()">&times;</span>
+              <video id="modalVideo" autoplay muted controls>
+                <source src="" type="video/mp4">
+                Il tuo browser non supporta il video HTML5.
+              </video>
+            </div>
+          </div>
+          
         
     </div>
 

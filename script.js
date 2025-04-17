@@ -32,3 +32,38 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     if (e.key === "Escape") closeModal();
   });
 
+  function openVideoModal(videoSrc) {
+    const video = document.getElementById("modalVideo");
+    const source = video.querySelector("source");
+
+    // Imposta il video e ricarica
+    source.src = videoSrc;
+    video.load();
+
+    // Appena pronto: parte dal secondo 0 con audio
+    video.muted = false;
+    video.currentTime = 0;
+
+    // Mostra il modal
+    document.getElementById("videoModal").style.display = "block";
+
+    // Play forzato (alcuni browser lo bloccano se non c’è interazione)
+    video.play().catch(err => {
+      console.warn("Autoplay bloccato dal browser:", err);
+    });
+  }
+
+  function closeVideoModal() {
+    const video = document.getElementById("modalVideo");
+    video.pause();
+    video.currentTime = 0;
+    document.getElementById("videoModal").style.display = "none";
+  }
+
+  // Chiudi cliccando fuori
+  window.onclick = function(event) {
+    const modal = document.getElementById("videoModal");
+    if (event.target === modal) {
+      closeVideoModal();
+    }
+  };

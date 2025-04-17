@@ -57,7 +57,7 @@ nav a:active {
 }
 
 header {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 header h1 {
@@ -123,7 +123,25 @@ section.card p {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.badge-novita {
+  background-color: #e63946;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1;
+  rotate: -15deg;
+}
 
+/* Per posizionare correttamente la badge */
+.card {
+  position: relative;
+}
 .btn:hover {
   background-color: #2a9d8f;
   transform: translateY(-2px);
